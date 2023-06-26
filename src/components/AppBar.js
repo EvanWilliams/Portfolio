@@ -63,7 +63,6 @@ function ResponsiveAppBar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
               
             </IconButton>
             <Menu
@@ -84,11 +83,14 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
+              {
+              
+              pages.map((page) => {
+              (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
-              ))}
+              )})}
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -111,7 +113,48 @@ function ResponsiveAppBar() {
             
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {pages.map( (page) => {
+              
+              if(page === 'github'){
+
+
+
+
+
+
+
+
+                return(
+                  <a href={`https://github.com/EvanWilliams`}
+                  target='_blank'
+                  sx={{textDecoration: 'none'}}>
+                    <Button
+                      key={page}
+                      onClick={handleCloseNavMenu}
+                      sx={{ my: 2, color: 'white', display: 'block'}}
+                    >
+                      {page}
+                    </Button>
+                  </a>
+                )
+              }
+              else if(page === 'linkedin'){
+                  return(
+                    <a href={`https://www.linkedin.com/in/evan-williams-b55572a/`}
+                    target='_blank'
+                    sx={{textDecoration: 'none'}}>
+                      <Button
+                        key={page}
+                        onClick={handleCloseNavMenu}
+                        sx={{ my: 2, color: 'white', display: 'block'}}
+                      >
+                        {page}
+                      </Button>
+                    </a>
+                  )
+              }
+              else{
+               return(
               <a href={`/${page}`}
               sx={{textDecoration: 'none'}}>
                 <Button
@@ -122,7 +165,9 @@ function ResponsiveAppBar() {
                   {page}
                 </Button>
               </a>
-            ))}
+            )}
+            
+            })}
           </Box>
         </Toolbar>
       </Container>
