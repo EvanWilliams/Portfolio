@@ -1,12 +1,15 @@
-import * as React from "react"
-import * as classes from "./portfolio.module.scss"
-import ResponsiveAppBar from "../components/AppBar"
-import FrontPage from "../images/AboutourFamilyBusiness.png"
-import contactUs from '../images/ContactUs.png'
-import ShippingDashboardFilter from '../images/ShippingDashboardFilter.png'
-import ShippingDashboardResults from '../images/ShippingDashboardResults.png'
-import GiphyDemo from '../images/GiphyDemo.png'
-import ImageContainer from '../components/imageContainer/imageContainer'
+import * as React from "react";
+import * as classes from "./portfolio.module.scss";
+import ResponsiveAppBar from "../components/AppBar";
+import FrontPage from "../images/AboutourFamilyBusiness.png";
+import contactUs from '../images/ContactUs.png';
+import ShippingDashboardFilter from '../images/ShippingDashboardFilter.png';
+import ShippingDashboardResults from '../images/ShippingDashboardResults.png';
+import GiphyDemo from '../images/GiphyDemo.png';
+import ImageContainer from '../components/imageContainer/imageContainer';
+import EP1 from '../images/EP-1.png';
+import EP2 from '../images/EP-2.png';
+import EP3 from '../images/EP-3.png';
 const PortfolioPage = () => {
   return (
     <div className={classes.pagewrapper}>
@@ -38,7 +41,6 @@ const PortfolioPage = () => {
         <li>Allows user to sort and filter a large amount of data in various ways.
         </li>
       </ul>
-
       <div className={classes.gridcenter}>
         <h3>View of the filters available to sort results.</h3>
         <hr/>
@@ -47,6 +49,23 @@ const PortfolioPage = () => {
         <hr/>
         <ImageContainer image={ShippingDashboardResults}/>
       </div>
+      <h3>Built an Example Component for a LMS</h3>
+      <h4><a href='evanwilliams.github.io/EquilibriumPrice/'>evanwilliams.github.io/EquilibriumPrice/</a></h4>
+      <ul>
+        <li>Information about Equilibrum Price to give context to the tool.</li>
+        <li>Slider that allows the user to experiment with different prices for a product to find the Equilibrium price.</li>
+        <li>Changing data and a chart that shows supply and demand curves with ability to change underlying variables.
+        </li>
+      </ul>
+      <div className={classes.gridcenter}>
+        <h3>Equilibrium Price Learning Management System example Component</h3>
+        <hr/>
+        <ImageContainer image={EP1}/>
+        <hr/>
+        <ImageContainer image={EP2}/>
+        <hr/>
+        <ImageContainer image={EP3}/>
+      </div>
       <h3>Built a GIF website using Giphy API</h3>
       <ul>
         <li>Searches GIFs and gets a random GIF while showing trending gifs at the top.</li>
@@ -54,7 +73,6 @@ const PortfolioPage = () => {
         <li>Always up to date with the new GIFs, your own GIF homepage.
         </li>
       </ul>
-
       <div className={classes.gridcenter}>
         <h3>GIF results page fetching from the Giphy API</h3>
         <hr/>
