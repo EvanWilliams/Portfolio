@@ -49,12 +49,12 @@ const PortfolioPage = () => {
         <hr/>
         <ImageContainer image={ShippingDashboardResults}/>
       </div>
-      <h3>Built an Example Component for a LMS</h3>
-      <h4><a href='evanwilliams.github.io/EquilibriumPrice/'>evanwilliams.github.io/EquilibriumPrice/</a></h4>
+      <h3>Built an Example Component for an LMS</h3>
+      <h4><a href='https://evanwilliams.github.io/EquilibriumPrice/'>evanwilliams.github.io/EquilibriumPrice/</a></h4>
       <ul>
         <li>Information about Equilibrum Price to give context to the tool.</li>
         <li>Slider that allows the user to experiment with different prices for a product to find the Equilibrium price.</li>
-        <li>Changing data and a chart that shows supply and demand curves with ability to change underlying variables.
+        <li>Changing results and a chart that shows supply and demand curves with ability to change underlying variables.
         </li>
       </ul>
       <div className={classes.gridcenter}>
